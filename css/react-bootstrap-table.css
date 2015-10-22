@@ -51,6 +51,11 @@
 .react-bs-container .tool-bar{
   margin-bottom: 5px
 }
+
+.bs-table-search-container {
+  float: right;
+}
+
 /*inline editor default style*/
 .react-bs-table .form-control.editor{
   width:100%;

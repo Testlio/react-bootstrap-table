@@ -7,7 +7,7 @@ import Notifier from '../Notification.js';
 class ToolBar extends React.Component{
 
   constructor(props) {
-		super(props);
+        super(props);
     this.timeouteClear=0;
     this.state = {
       isInsertRowTrigger: true,
@@ -115,7 +115,7 @@ class ToolBar extends React.Component{
             <i className="glyphicon glyphicon-trash"></i> Delete
           </button>:null;
     var searchTextInput = this.props.enableSearch?
-      <input type='text' placeholder={this.props.searchPlaceholder?this.props.searchPlaceholder:'Search'} onKeyUp={this.handleKeyUp.bind(this)}/>:null;
+      <div className="bs-table-search-container"><input type='text' className='form-control input-sm bs-table-search' placeholder={this.props.searchPlaceholder?this.props.searchPlaceholder:'Search'} onKeyUp={this.handleKeyUp.bind(this)}/></div>:null;
     var modal = this.props.enableInsert?this.renderInsertRowModal(modalClassName):null;
     var warningStyle = {
       display: "none",
@@ -123,7 +123,7 @@ class ToolBar extends React.Component{
     };
     return(
       <div>
-        <div className="btn-group btn-group-xs" role="group" aria-label="...">
+        <div className="btn-group btn-group-sm" role="group" aria-label="...">
           {insertBtn}
           {deleteBtn}
         </div>
