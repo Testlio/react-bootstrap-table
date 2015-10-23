@@ -37,7 +37,8 @@ class TableHeader extends React.Component{
   }
 
   render(){
-    var containerClasses = classSet("table-header");
+    var headerClass = this.props.headerClass ? this.props.headerClass : "";
+    var containerClasses = classSet("table-header", headerClass);
     var tableClasses = classSet("table", "table-hover", {
         "table-bordered": this.props.bordered
     });
@@ -87,6 +88,7 @@ TableHeader.propTypes = {
   sortName: React.PropTypes.string,
   sortOrder: React.PropTypes.string,
   hideSelectColumn: React.PropTypes.bool,
+  headerClass: React.PropTypes.string,
   bordered: React.PropTypes.bool
 };
 
