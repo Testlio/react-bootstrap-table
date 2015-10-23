@@ -5,3 +5,5 @@ node_modules
 *.sublime-workspace
 *.idea
 *.iml
+
+demo/js/demo.bundle.js
