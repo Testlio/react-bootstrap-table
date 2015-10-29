@@ -1,5 +1,6 @@
 /*editor error animate*/
 /*@import "~toastr/build/toastr.min.css";*/
+@import "https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css";
 
 .react-bs-table .table-header{
   height: 42px;
@@ -52,11 +53,6 @@
 .react-bs-container .tool-bar{
   margin-bottom: 5px
 }
-
-.bs-table-search-container {
-  float: right;
-}
-
 /*inline editor default style*/
 .react-bs-table .form-control.editor{
   width:100%;
