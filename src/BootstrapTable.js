@@ -132,7 +132,8 @@ class BootstrapTable extends React.Component {
   }
 
   render() {
-    var tableClass = classSet("react-bs-table");
+    var containerClass = classSet("react-bs-container", this.props.containerClass || '');
+    var tableClass = classSet("react-bs-table", this.props.tableClass || '');
     var childrens = this.props.children;
     var style = {
       height: this.props.height
@@ -158,7 +159,7 @@ class BootstrapTable extends React.Component {
     var toolBar = this.renderToolBar();
     var tableFilter = this.renderTableFilter(columns);
     return (
-      <div className="react-bs-container">
+      <div className={containerClass}>
         {toolBar}
         <div ref="table" style={style} className={tableClass}>
           <TableHeader rowSelectType={this.props.selectRow.mode}
